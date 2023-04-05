@@ -1,0 +1,936 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  @font-face {
+    font-family: "Ludvig Van Bethoveen";
+    src: url("../fonts/ludvig-van-bethoveen.woff");
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Mon Amour";
+    src: url("../fonts/mon-amour-two-medium.woff");
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .main {
+    position: relative;
+    
+    box-sizing: border-box;
+    min-width: 300px;
+    padding: 15px 30px;
+    padding-bottom: 80px;
+
+    text-align: center;
+
+    background-image: url("../images/tree.jpg");
+    background-color: rgb(104, 146, 100);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .main::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgb(0, 0, 0);
+    opacity: 0.4;
+  }
+
+  .inventation {
+    position: relative;
+    z-index: 3;
+    bottom: 40px;
+
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: "Times New Roman", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    color: aliceblue;
+  }
+
+  .tab-pc {
+    display: none;
+  }
+
+  .names {
+    position: relative;
+    z-index: 3;
+    bottom: 25px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    font-family: "Mon Amour", "Times New Roman", serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 50px;
+    line-height: 1.2;
+
+    color: aliceblue;
+  }
+
+  .meet-date {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+
+    font-family: "Times New Roman";
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: aliceblue;
+  }
+
+  .meet-date::before {
+    content: "";
+    
+    z-index: 3;
+
+    width: 130px;
+    height: 3px;
+    margin-top: 23px;
+    margin-bottom: 9px;
+    background-color: #e1d9bd;
+  }
+
+  .meet-date::after {
+    content: "";
+
+    z-index: 3;
+
+    width: 130px;
+    height: 3px;
+    margin-top: 9px;
+    margin-bottom: 23px;
+    background-color: #e1d9bd;
+  }
+
+  .timer {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 20px;
+
+    font-family: "Times New Roman";
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+
+    color: aliceblue;
+  }
+
+  .inv-container {
+    position: relative;
+
+    padding: 20px 0 30px;
+
+    background-image: url("../images/tree.jpg");
+    background-color: rgb(104, 146, 100);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .inv-container::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgb(0, 0, 0);
+    opacity: 0.4;
+  }
+
+   .inventation-text {
+    position: relative;
+    z-index: 3;
+    
+    box-sizing: border-box;
+    padding: 30px 45px;
+    min-width: 300px;
+
+    background-image: url("../images/back.jpg");
+    background-color: rgb(104, 146, 100);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    text-align: center;
+    font-size: 18px;
+    font-family: "Times New Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.8;
+  }
+
+  .inventation-text::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .chapter-header {
+    position: relative;
+    z-index: 3;
+    bottom: 10px;
+
+    font-family: "Mon Amour", "Times New Roman", serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .inventation-text .chapter-header, .inventation-text .text {
+    position: relative;
+    z-index: 3;
+
+    color: aliceblue;
+  }
+
+  .history-photo {
+    position: relative;
+
+    text-align: center;
+
+    background-image: url("../images/tree.jpg");
+    background-color: rgb(104, 146, 100);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .history-photo::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0);
+    opacity: 0.6;
+  }
+
+  .history-we {
+    position: relative;
+
+    width: 100%;
+
+    z-index: 3;
+  }
+
+  .our-history {
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    font-family: "Times New Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    background-image: url("../images/tree.jpg");
+    background-color: rgb(104, 146, 100);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: aliceblue;
+  }
+
+  .our-history::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgb(0, 0, 0);
+    opacity: 0.6;
+  }
+
+  .story {
+    position: relative;
+    z-index: 3;
+
+    font-family: "Mon Amour", "Times New Roman", serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .story-prewiew {
+    position: relative;
+    z-index: 3;
+
+    width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .interview {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 20px;
+    padding: 0 20px;
+
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .text .interview-name {
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .timing-root {
+    position: relative;
+
+    padding-top: 20px;
+
+    background-image: url("../images/tree.jpg");
+    background-color: rgb(104, 146, 100);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .timing-root::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgb(0, 0, 0);
+    opacity: 0.6;
+  }
+
+  .timing-container {
+    position: relative;
+    z-index: 3;
+
+    padding: 20px 15px;
+
+    text-align: center;
+
+    background-image: url("../images/back7.jpg");
+    background-color: rgb(104, 146, 100);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: aliceblue;
+  }
+  
+  .timing-container::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .timing {
+    position: relative;
+    z-index: 3;
+
+    max-width: 340px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .timing .chapter-header {
+    text-align: center;
+  }
+
+  .place {
+    text-align: left;
+  }
+
+  .place:nth-child(n+2) {
+    margin-top: 20px;
+  }
+
+  .place-header {
+    font-weight: 700;
+    font-size: 16px;
+    font-style: normal;
+    font-family: "Times New Roman", serif;
+  }
+
+  .place-address {
+    margin-top: 10px;
+
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    font-family: "Times New Roman", serif;
+  }
+
+  .wedding-timing {
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    font-family: "Times New Roman", serif;
+  }
+
+  .wedding-timing:nth-child(n+2) {
+    margin-top: 20px;
+  }
+
+  .time {
+    width: 70px;
+
+    text-align: left;
+  }
+
+  .description {
+    width: 69.44%;
+
+    text-align: left;
+  }
+
+  .description-header {
+    font-weight: 700;
+    font-size: 14px;
+    font-style: normal;
+    font-family: "Times New Roman", serif;
+  }
+
+  .description-text {
+    margin-top: 5px;
+  }
+
+  .wishes-container {
+    position: relative;
+
+    padding: 0 0 30px 0;
+
+    background-image: url("../images/tree.jpg");
+    background-color: rgb(104, 146, 100);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .wishes-container::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgb(0, 0, 0);
+    opacity: 0.4;
+  }
+
+  .wishes {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    padding: 20px 15px;
+    box-sizing: border-box;
+
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    font-family: "Times New Roman", serif;
+
+    background-image: url("../images/back11.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(147, 150, 137);
+    color: aliceblue;
+ }
+
+  .wishes::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgb(165, 78, 84);
+    opacity: 0.5;
+  }
+
+  .wishes-img-container {
+    position: relative;
+    bottom: 18px;
+
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wishes-img {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    
+    width: 45px;
+    height: auto;
+  }
+
+  .wishes-wine {
+    width: 100%;
+  }
+
+  .wishes p {
+    position: relative;
+    z-index: 3;
+  }
+
+  .map {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+    background-image: url("../images/tree.jpg");
+    background-color: rgb(104, 146, 100);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: aliceblue;
+  }
+
+  .map::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .map-marker {
+    position: relative;
+    z-index: 3;
+
+    width: 91.67%;
+    max-width: 500px;
+    height: 360px;
+    margin-bottom: 20px;
+  }
+
+  .map .chapter-header {
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    text-align: center;
+  }
+
+  .footer .date {
+    font-family: "Times New Roman";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+  }
+
+  .footer-names {
+    margin-top: 10px;
+    font-style: italic;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Mon Amour", "Times New Roman", serif;
+  }
+
+  @media (min-width: 641px) {
+    .main {
+      padding: 20px 35px;
+      padding-bottom: 80px;
+    }
+
+    .inventation {
+      font-size: 32px;
+    }
+  
+    .names {
+      padding-top: 70px;
+      padding-bottom: 70px;
+
+      font-size: 90px;
+    }
+
+    .name:first-child {
+      position: relative;
+      right: 30px;
+    }
+
+    .names p:nth-child(2) {
+      position: relative;
+      bottom: 10px;
+    }
+
+    .name:last-child {
+      position: relative;
+      left: 30px;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    .tab-pc {
+      display: block;
+      
+      font-size: 42px;
+      text-transform: uppercase;
+    }
+  
+    .meet-date {
+      font-size: 36px;
+    }
+
+    .meet-date::before {
+      width: 160px;
+    }
+  
+    .meet-date::after {
+      width: 160px;
+    }
+  
+    .timer {
+      margin-top: 30px;
+
+      font-size: 36px;
+    }
+
+    .chapter-header {
+      font-size: 56px;
+    }
+
+    .inventation-text {
+      padding: 50px 140px;
+    }
+
+    .inventation-text .text {
+      min-width: 365px;
+      max-width: 588px;
+      margin-left: auto;
+      margin-right: auto;
+
+      font-size: 24px;
+    }
+
+    .our-history {
+      padding: 30px 50px;
+      box-sizing: border-box;
+    }
+
+    .story {
+      font-size: 56px;
+    }
+
+    .story-prewiew, .interview {
+      font-size: 24px;
+    }
+
+    .timing {
+      max-width: 630px;
+      padding: 30px 80px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+    }
+
+    .place-header {
+      font-size: 24px;
+    }
+
+    .place-address {
+      font-size: 18px;
+    }
+
+    .timing .chapter-header, .wishes .chapter-header {
+      margin-bottom: 15px;
+    }
+
+    .wedding-timing {
+      min-width: 400px;
+      max-width: 600px;
+      font-size: 24px;
+    }
+
+    .description-header {
+      font-size: 24px;
+    }
+
+    .description {
+      width: 80%;
+    }
+
+    .wishes {
+      padding: 30px 150px;
+
+      font-size: 24px;
+    }
+
+    .wishes-img-container {
+      position: absolute;
+      top: 32%;
+      right: 20px;
+      left: 0;
+
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .wishes-img {
+      width: 18%;
+    }
+
+    .wishes p {
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .map-marker {
+      max-width: 800px;
+      height: 700px;
+    }
+
+    .footer .date {
+      font-size: 24px;
+    }
+  
+    .footer-names {
+      font-size: 40px;
+    }
+  }
+
+  @media (min-width: 1201px) {
+    .main {
+      padding-left: 50px;   /*Переопределили левый и правый паддинги (были по 20px)*/
+      padding-right: 50px;  /*Почему-то, с маленькими паддингами по 20px при ширине 100% появлялся нижний скролл, а при больших паддингах нижний скролл исчезает*/
+      margin-top: 0;
+      /*Также убрать нижний скролл можно, усиановив свойство overflow: hidden;*/
+    }
+
+    .names {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .tab-pc {
+      font-size: 60px;
+    }
+
+    .meet-date {
+      font-size: 48px;
+    }
+
+    .meet-date::before {
+      width: 250px;
+    }
+
+    .meet-date::after {
+      width: 250px;
+    }
+
+    .timer {
+      font-size: 48px;
+    }
+
+    .inv-container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .inventation-text {
+      background-image: url("../images/back7.jpg");
+    }
+
+    .inventation-text .text {
+      font-size: 30px;
+    }
+
+    .history-photo {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: auto;
+    }
+
+    .history-photo::after {
+      opacity: 0.4;
+    }
+  
+    .history-we {
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      border: none;
+    }
+
+    .our-history {
+      padding: 30px 200px;
+    }
+
+    .our-history::after {
+      opacity: 0.4;
+    }
+
+    .timing-root {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .timing-root::after {
+      opacity: 0.4;
+    }
+
+    .timing-container {
+      padding: 0;
+    }
+
+    .timing {
+      margin-top: 0;
+    }
+
+    .wishes {
+      padding: 50px 230px;
+
+      font-size: 30px;
+    }
+
+    .wishes .chapter-header {
+      position: relative;
+      bottom: 20px;
+    }
+
+    .wishes-img-container {
+      top: 25%;
+
+      max-width: 1300px;
+    }
+
+    .wishes-img {
+      width: 15%;
+    }
+
+    .wishes p {
+      max-width: 908px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .map .chapter-header {
+      padding-top: 20px;
+
+      color: aliceblue;
+    }
+
+    .map-marker, .map .chapter-header {
+      position: relative;
+      z-index: 3;
+    }
+
+    .footer {
+      padding-bottom: 30px;
+    }
+  }

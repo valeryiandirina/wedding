@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Приглашение на свадьбу</title>
+
+    <script>timeend= new Date();
+        // IE и FF по разному отрабатывают getYear()
+        timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1900),3,29,15,0);
+        // для задания обратного отсчета до определенной даты укажите дату в формате:
+        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ);
+        // Для задания даты с точностью до времени укажите дату в формате:
+        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ, ЧАСЫ-1, МИНУТЫ);
+        function time() {
+            today = new Date();
+            today = Math.floor((timeend-today)/1000);
+            tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+            tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+            thour=today%24; today=Math.floor(today/24);
+            timestr=today +" д. "+ thour+" ч. "+tmin+" мин. "+tsec+" сек.";
+            document.getElementById('t').innerHTML=timestr;
+            window.setTimeout("time()",1000);
+        }</script>
+  </head>
+
+  <body onload="time()">
+    <div class="main">
+        <div class="inventation">
+            <p class="mobile">Приглашаем <br> на свадьбу</p>
+            <p class="tab-pc">Приглашаем &nbsp;на свадьбу</p>
+        </div>
+        <div class="names">
+            <p class="name">Валерий</p>
+            <p>и</p>
+            <p class="name">Ирина</p>
+        </div>
+        <div class="meet-you">
+            <p class="meet-date">
+                29 апреля 2023
+            </p>
+        </div>
+        <p class="timer" >
+            <span id="t"></span>
+        </p>
+    </div>
+   
+<div class="inv-container">
+    <div class="inventation-text">
+        <h2 class="chapter-header">Дорогой гость</h2>
+        <div class="text">
+            <p>Мы рады сообщить, что 29 апреля 2023 года
+            состоится самое главное торжество в нашей 
+            жизни&nbsp;- день нашей свадьбы!</p>
+            <p>Приглашаем Вас разделить с  нами радость 
+            этого незабываемого дня.
+            </p>
+        </div>
+    </div>
+</div>
+
+    <div class="history-photo">
+        <img src="images/we8.jpg" class="history-we">
+    </div>
+
+    <div class="our-history">
+        <h2 class="story">Наша история</h2>
+        <p class="story-prewiew">
+            Мы встретились весной 2020 года и с тех пор мы всегда вместе. 
+            За это время мы пережили немало прекрасных моментов, 
+            ошибок и удач, совместных открытий и радостей!
+        </p>
+        <div class="interview">
+            <div class="text">
+                <p class="interview-text">
+                <span class="interview-name">Ирина:</span> 
+                "Мы познакомились совсем не романтично, на службе.
+                Я впервые увидела Валеру, когда только устраивалась 
+                на работу. Он буквально пробежал перед моим носом, и
+                я успела заметить только его длинные ноги".
+                </p>
+            </div>
+        </div>
+        <div class="interview">
+            <div class="text">
+                <p class="interview-text">
+                <span class="interview-name">Валерий:</span> 
+                "На самом деле, я уже давно ждал момента, когда
+                Ира устроится к нам на службу, так как был наслышан 
+                о ней. Но в первые месяцы познакомиться нам не удавалось, 
+                поэтому я героически решил совершить вылазку на узел 
+                связи, чтобы выпить чаю и наконец-то познакомиться.
+                Мой поход был удачным, так как спустя некоторое время 
+                мы начали встречаться".
+                </p>
+            </div>
+        </div>
+    </div>
+
+<div class="timing-root">
+    <div class="timing-container">
+        <div class="timing">
+            <h2 class="chapter-header">Свадебное расписание</h2>
+            <div class="timing-box">
+                <div class="place">
+                    <h3 class="place-header">На территории отеля "Либхабер"</h3>
+                    <p class="place-address">
+                        г. Ростов-на-Дону, ул.&nbsp;Малиновского,&nbsp;67
+                    </p>
+                </div>
+                <div class="wedding-timing">
+                    <p class="time">15:00</p>
+                    <div class="description">
+                        <h4 class="description-header">Сбор гостей</h4>
+                        <p class="description-text">В ожидании церемонии
+                        Вы сможете перекусить и насладиться приятной атмосферой.
+                        </p>
+                    </div>
+                </div>
+                <div class="wedding-timing">
+                    <p class="time">15:30</p>
+                    <div class="description">
+                        <h4 class="description-header">Церемония бракосочетания</h4>
+                        <p class="description-text">Это самый важный момент 
+                        сегодняшнего дня! Спасибо, что разделите его с нами.</p>
+                    </div>
+                </div>
+                <div class="wedding-timing">
+                    <p class="time">16:30</p>
+                    <div class="description">
+                        <h4 class="description-header">Трансфер до ресторана</h4>
+                        <p class="description-text">На парковке отеля будет 
+                        ждать автобус, который довезёт всех до ресторана, где мы 
+                        отпразднуем рождение нашей семьи.</p>
+                    </div>
+                </div>
+                <div class="place">
+                    <h3 class="place-header">На территории ресторана "Олимп"</h3>
+                    <p class="place-address">
+                        с. Чалтырь, ул.&nbsp;Ростовская,&nbsp;59-а
+                    </p>
+                </div>
+                <div class="wedding-timing">
+                    <p class="time">17:00</p>
+                    <div class="description">
+                        <h4 class="description-header">Праздничный ужин</h4>
+                        <p class="description-text">Вас ждет хорошее настроение, 
+                        весёлая музыка и развлечения!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wishes-container">
+    <div class="wishes">
+        <div class="wishes-img-container">
+            <div class="wishes-img">
+                <img class="wishes-wine" src="images/wine.png">
+            </div>
+        </div>
+        <h2 class="chapter-header">Пожелания</h2>
+        <p>
+            Пожалуйста, не дарите нам цветы, мы не успеем 
+            насладиться их красотой, так как сразу после 
+            свадьбы уедем в путешествие.
+            Вместо этого мы будем рады бутылочке Вашего любимого
+            вина, которую Вы можете украсить своими пожеланиями!
+        </p>
+    </div>
+</div>
+
+    <div class="map">
+        <h2 class="chapter-header">Как добраться</h2>
+        <iframe class="map-marker" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21664.61066424581!2d39.60254321848137!3d47.25421062888231!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9a8f82b0a17%3A0xade2834ff83b3c89!2z0JvQuNCx0YXQsNCx0LXRgA!5e0!3m2!1sru!2sru!4v1679836007890!5m2!1sru!2sru" width="300" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="map-marker" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21654.97251324811!2d39.50792066160429!3d47.277765157712814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c6a8ed577b43%3A0xab9bc2b360760857!2z0KDQtdGB0YLQvtGA0LDQvSDCq9Ce0LvQuNC80L_Cuw!5e0!3m2!1sru!2sru!4v1679836110278!5m2!1sru!2sru" width="300" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer class="footer">
+        <div class="date">29 | 04 | 23</div>
+        <div class="footer-names">Валерий и Ирина</div>
+    </footer>
+  </body>
